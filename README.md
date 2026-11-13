@@ -12,7 +12,8 @@ The implementation includes:
 - signed drift analysis and a stable threshold policy;
 - sample-accurate audio alignment;
 - durable take, analysis, and conform states;
-- per-identifier locking and atomic directory publication;
+- per-identifier locking whose entries are retired once the last holder or
+  waiter releases the identity;
 - a deterministic ZIP bundle with a matching receipt.
 
 Automated tests are intentionally deferred. A later task stage will add the
